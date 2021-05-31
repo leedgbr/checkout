@@ -1,0 +1,22 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Query {
+  cart(id: ID!): Cart
+}
+
+type Cart {
+    total: Int!
+}
+
+type Mutation {
+  addItem(cartId: ID!, item: Item!): Item
+}
+
+type Item {
+  sku: ID!
+  quantity: Int!
+}
+
